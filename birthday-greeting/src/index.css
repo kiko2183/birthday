@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fdf2f8, #d1fae5);
+  color: #374151;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #be185d;
+}
+
+a {
+  color: #ec4899;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #be185d;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.romantic-button {
+  background: linear-gradient(to right, #fbcfe8, #d1fae5);
+  color: #9b2c6a;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border: 2px solid #f9a8d4;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(251, 207, 232, 0.5);
+}
+
+.romantic-button:hover {
+  background: linear-gradient(to right, #f9a8d4, #6ee7b7);
+  color: #6b21a8;
+}
+
+.memory-button {
+  background: #fff0f5;
+  color: #a21caf;
+  border: 2px solid #f9a8d4;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(255, 182, 193, 0.4);
+  margin: 0.25rem;
+}
+
+.memory-button:hover {
+  background: #ffe4e1;
+  color: #7e22ce;
+}
+
+.play-button {
+  background: #f472b6;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px rgba(248, 113, 113, 0.4);
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.play-button:hover {
+  background: #ec4899;
+}
+
+.typing-text::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  background-color: #f472b6;
+  animation: blink-caret 0.75s step-end infinite;
+  vertical-align: bottom;
+  margin-left: 2px;
+  height: 1em;
+}
+
+@keyframes blink-caret {
+  from, to { opacity: 0 }
+  50% { opacity: 1; }
+}
