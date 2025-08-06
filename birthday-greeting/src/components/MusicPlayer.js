@@ -1,15 +1,17 @@
 import { useState } from 'react';
+import './MusicPlayer.css';
 
 function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="fixed bottom-4 right-4 z-20">
+    <div className="music-player-container">
       <button
         onClick={() => setPlaying(!playing)}
-        className="romantic-button text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3"
+        className="romantic-button"
+        aria-label={playing ? 'Пауза музики' : 'Грати музику'}
       >
-        {playing ? '⏸ Пауза' : '🔊 Грати'}
+        {playing ? '⏸' : '🔊'}
       </button>
 
       {playing && (

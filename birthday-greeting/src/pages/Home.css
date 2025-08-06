@@ -1,0 +1,236 @@
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom right, #fdf2f8, #d1fae5);
+  }
+  
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 245, 247, 0.95); /* Semi-transparent pinkish background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    padding: 1rem;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    color: #831843;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border: 1px solid #f9a8d4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background: #fce7f3;
+    color: #be185d;
+  }
+  
+  .close-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(219, 39, 119, 0.2);
+  }
+  
+  .fullscreen-menu-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #831843;
+    margin-bottom: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .fullscreen-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+    border: 3px solid #f9a8d4;
+    border-radius: 1rem;
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .main-title {
+    font-size: 1.75rem; /* Smaller for mobile */
+    font-weight: bold;
+    color: #831843;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .typing-text {
+    font-size: 0.875rem; /* Smaller for mobile */
+    color: #be185d;
+    max-width: 90%;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .typing-text::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    background-color: #f472b6;
+    animation: blink-caret 0.75s step-end infinite;
+    vertical-align: bottom;
+    margin-left: 2px;
+    height: 1em;
+  }
+  
+  .desktop-menu {
+    display: none; /* Hidden on mobile */
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .memory-button {
+    background: #fff0f5;
+    color: #a21caf;
+    border: 2px solid #f9a8d4;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(255, 182, 193, 0.4);
+    font-size: 0.875rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .memory-button:hover {
+    background: #ffe4e1;
+    color: #7e22ce;
+  }
+  
+  .memory-button:active {
+    transform: scale(0.95);
+  }
+  
+  .back-button {
+    background: transparent;
+    color: #ec4899;
+    border: 2px solid #f9a8d4;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: #fce7f3;
+    color: #be185d;
+  }
+  
+  .back-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Tablet (768px and above) */
+  @media (min-width: 768px) {
+    .home-container {
+      padding: 1.5rem;
+    }
+  
+    .fullscreen-menu {
+      padding: 1.5rem;
+    }
+  
+    .fullscreen-menu-title {
+      font-size: 2rem;
+    }
+  
+    .fullscreen-menu-links {
+      gap: 1.5rem;
+    }
+  
+    .main-content {
+      max-width: 600px;
+      padding: 2rem;
+      border-width: 4px;
+    }
+  
+    .main-title {
+      font-size: 2.5rem;
+    }
+  
+    .typing-text {
+      font-size: 1.125rem;
+      max-width: 500px;
+    }
+  
+    .desktop-menu {
+      display: flex; /* Show on tablet */
+    }
+  
+    .memory-button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  
+    .back-button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+  
+  /* Laptop (1158px and above) */
+  @media (min-width: 1158px) {
+    .home-container {
+      padding: 2rem;
+    }
+  
+    .fullscreen-menu {
+      display: none; /* Hidden on laptop as burger menu is hidden */
+    }
+  
+    .main-content {
+      max-width: 800px;
+      padding: 2.5rem;
+    }
+  
+    .main-title {
+      font-size: 3.5rem;
+    }
+  
+    .typing-text {
+      font-size: 1.5rem;
+      max-width: 600px;
+    }
+  
+    .desktop-menu {
+      gap: 1rem;
+    }
+  
+    .memory-button {
+      font-size: 1.125rem;
+      padding: 0.75rem 1.75rem;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to { opacity: 0 }
+    50% { opacity: 1; }
+  }

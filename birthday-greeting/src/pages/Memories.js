@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import './Memories.css';
 
 function Memories() {
   const { year } = useParams();
@@ -23,26 +24,24 @@ function Memories() {
   const memories = dummyMemories[year] || [];
 
   return (
-    <div className="mt-12">
-      <h2 className="text-3xl font-semibold text-pink-800 mb-6">Спогади за {year} 📸</h2>
+    <div className="memories-container">
+      <h2 className="memories-title">Спогади за {year} 📸</h2>
 
       {memories.length === 0 ? (
-        <p className="text-pink-600">На жаль, спогадів за цей рік ще немає 😢</p>
+        <p className="no-memories">На жаль, спогадів за цей рік ще немає 😢</p>
       ) : (
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="memories-grid">
           {memories.map((m, i) => (
-            <div key={i} className="bg-white rounded-xl shadow-md p-4 max-w-xs">
-              <img src={m.img} alt={m.text} className="rounded-md mb-3" />
-              <h3 className="text-pink-700 font-semibold">{m.date}</h3>
-              <p className="text-pink-600">{m.text}</p>
+            <div key={i} className="memory-card">
+              <img src={m.img} alt={m.text} className="memory-image" />
+              <h3 className="memory-date">{m.date}</h3>
+              <p className="memory-text">{m.text}</p>
             </div>
           ))}
         </div>
       )}
 
-      <Link to="/" className="mt-10 inline-block text-pink-700 underline hover:text-pink-900">
-        ⬅ Назад до головної
-      </Link>
+      <Link to="/" className="back-link">⬅ Назад до головної</Link>
     </div>
   );
 }

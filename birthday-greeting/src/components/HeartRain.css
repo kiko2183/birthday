@@ -1,7 +1,7 @@
 .heart {
   position: absolute;
   top: -2rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem; /* Smaller for mobile */
   animation-name: fall;
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
@@ -17,5 +17,19 @@
   100% {
     transform: translateY(100vh) rotate(360deg);
     opacity: 0;
+  }
+}
+
+/* Tablet (768px and above) */
+@media (min-width: 768px) {
+  .heart {
+    font-size: 1.5rem; /* Slightly larger for tablet */
+  }
+}
+
+/* Laptop (1158px and above) */
+@media (min-width: 1158px) {
+  .heart {
+    font-size: 1.8rem; /* Original size for laptop */
   }
 }
