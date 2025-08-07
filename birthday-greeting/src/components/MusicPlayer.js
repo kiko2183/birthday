@@ -27,3 +27,5 @@ function MusicPlayer() {
     </div>
   );
 }
+
+export default MusicPlayer;
