@@ -10,7 +10,7 @@ function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [photoVisible, setPhotoVisible] = useState({ 1: false, 2: false, 3: false, 4: false, 5: false, 6: false });
   const [greetingText, setGreetingText] = useState({ 1: '', 2: '', 3: '', 4: '', 5: '', 6: '' });
-  const years = ['2022', '2023', '2024', '2025'];
+  const years = ['фотогалерея'];
 
   // Initial typing effect for main text
   useEffect(() => {
