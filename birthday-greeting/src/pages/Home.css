@@ -122,6 +122,7 @@
     margin: 0 auto 0.75rem;
     text-align: center;
     word-wrap: break-word;
+    font-family: 'Dancing Script', cursive;
   }
   
   .typing-text::after {
@@ -133,6 +134,7 @@
     vertical-align: bottom;
     margin-left: 2px;
     height: 1em;
+    font-family: 'Dancing Script', cursive;
   }
   
   .desktop-menu {
