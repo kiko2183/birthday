@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HeartRain from './components/HeartRain';
@@ -8,9 +8,6 @@ import Home from './pages/Home';
 import Memories from './pages/Memories';
 
 function App() {
-  useEffect(() => {
-    document.body.style.overflowY = 'hidden'; // ховаємо прокрутку
-  }, []);
 
   return (
     <Router>

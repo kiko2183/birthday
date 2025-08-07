@@ -5,11 +5,12 @@
   color: #374151;
   font-family: 'Poppins', sans-serif;
   position: relative;
-  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 1rem;
+  height: 100%; /* Ensure full height for scrolling */
+  overflow-y: auto; /* Enable scrolling at the app level */
 }
 
 .content-wrapper {
