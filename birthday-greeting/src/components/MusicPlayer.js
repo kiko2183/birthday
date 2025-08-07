@@ -1,24 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './MusicPlayer.css';
 
 function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
-  const audioRef = useState(new Audio('/audio/lord-huron-the-night-we-met-(meloua.com).mp3'))[0];
-
-  useEffect(() => {
-    if (playing) {
-      audioRef.play().catch((error) => {
-        console.log('Помилка відтворення:', error);
-      });
-    } else {
-      audioRef.pause();
-    }
-
-    return () => {
-      audioRef.pause();
-      audioRef.currentTime = 0;
-    };
-  }, [playing, audioRef]);
 
   return (
     <div className="music-player-container">
@@ -29,8 +13,17 @@ function MusicPlayer() {
       >
         {playing ? '⏸' : '🔊'}
       </button>
+
+      {playing && (
+        <iframe
+          width="0"
+          height="0"
+          src="https://www.youtube.com/embed/KtlgYxa6BMU?autoplay=1"
+          title="The Night We Met - Lord Huron"
+          allow="autoplay"
+          style={{ display: 'none' }}
+        ></iframe>
+      )}
     </div>
   );
 }
-
-export default MusicPlayer;
